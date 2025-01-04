@@ -23,3 +23,21 @@ The code for each experiment is meticulously organized into separate folders, al
 - It is acknowledged that the current version of the code is somewhat messy. This candid admission suggests ongoing development and refinement of the codebase.
 - Despite its current state, the code provides valuable insights into the code-level details of the implementation, which can be beneficial for researchers and practitioners interested in understanding or replicating the study.
 - Future efforts may focus on cleaning and documenting the code further to enhance its accessibility and usability for the wider research community.
+
+---
+
+**Robustness to Missingness Experiment**:
+
+We are refactoring our experimental pipeline to use the independent library `torch-ists`. For reproducibility, we recommend using this updated version. You can find the library at the [torch-ists repository](https://github.com/yongkyung-oh/torch-ists).
+
+---
+
+## Reference
+```
+@inproceedings{oh2025dualdynamics,
+    title={DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis},
+    author={YongKyung Oh and Dongyoung Lim and Sungil Kim},
+    booktitle={The 39th Annual AAAI Conference on Artificial Intelligence},
+    year={2025},
+}
+```
