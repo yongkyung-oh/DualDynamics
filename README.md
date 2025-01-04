@@ -10,7 +10,7 @@ This repository contains the PyTorch implementation for the paper [DualDynamics:
 # **Code architecture**
 The code for each experiment is meticulously organized into separate folders, aligned with the original references used for implementation. 
 
-- `exp_classification`: PhysioNet Sepsis and Speech Commands, implemented from Kidger, P. et al. (2020) [1] (https://github.com/patrick-kidger/NeuralCDE)
+- `exp_classification`: PhysioNet Sepsis, implemented from Kidger, P. et al. (2020) [1] (https://github.com/patrick-kidger/NeuralCDE)
 - `exp_interpolation`: PhysionNet Mortality, implemented from Shukla, S. et al. (2020) [2] (https://github.com/reml-lab/mTAN)
 - `exp_MuJoCo`: MuJoCo Foresting task, implemented from Jhin, S. et al. (2021) [3] (https://github.com/sheoyon-jhin/ANCDE)
 - `exp_Google_2021`: Google Foresting task, implemented from Jhin, S. et al. (2022) [4] (https://github.com/sheoyon-jhin/EXIT)
