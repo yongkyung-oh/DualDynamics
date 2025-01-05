@@ -1,4 +1,4 @@
-# Stable Neural Stochastic Differential Equations (Neural SDEs)
+# DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis
 This repository contains the PyTorch implementation for the paper [DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis](https://arxiv.org/abs/2401.04979).
 
 > Oh, Y., Lim, D., & Kim, S. (2025, Feb). DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis. In The 39th Annual AAAI Conference on Artificial Intelligence.
