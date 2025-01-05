@@ -43,7 +43,8 @@ We are refactoring our experimental pipeline to use the independent library `tor
 
 ## Reference
 ```
-@inproceedings{oh2025dualdynamics,
+@inproceedings{
+    oh2025dualdynamics,
     title={DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis},
     author={YongKyung Oh and Dongyoung Lim and Sungil Kim},
     booktitle={The 39th Annual AAAI Conference on Artificial Intelligence},
