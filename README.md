@@ -42,7 +42,7 @@ We are refactoring our experimental pipeline to use the independent library `tor
 ---
 
 ## Reference
-```
+```bibtex
 @inproceedings{
   oh2025dualdynamics,
   title={DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis},
