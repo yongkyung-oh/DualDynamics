@@ -86,9 +86,9 @@ def main(intensity,                                                             
 
 
 def run_all(intensity, device):
-    for num_layer in [1, 2, 3, 4][::-1]:
-        for hidden in [16, 32, 64, 128][::-1]:
-            for model_name in [x for y in [['dualdynamics_{}_{}'.format(i,j) for i in ['x']] for j in ['n', 'r', 'g', 'c']] for x in y][::-1]:
+    for num_layer in [1, 2, 3, 4]:
+        for hidden in [16, 32, 64, 128]:
+            for model_name in [x for y in [['dualdynamics_{}_{}'.format(i,j) for i in ['x']] for j in ['n', 'r', 'g', 'c']] for x in y]:
                 main(intensity, device, model_name=model_name, hidden_channels=hidden, hidden_hidden_channels=hidden, num_hidden_layers=num_layer, method='euler')
 
 for _ in range(5):
