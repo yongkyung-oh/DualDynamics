@@ -264,29 +264,13 @@ class ists_layer(nn.Module):
             self.seq_layer = NeuralFlow(input_channels=self.coeff_dim, hidden_channels=self.hidden_dim,
                                         num_hidden_layers=self.num_hidden_layers, output_channels=self.hidden_dim, input_option=input_option, flow_option=flow_option)
 
-        elif self.model_name in flow_models[1]: # neuralflowcde
+        elif self.model_name in flow_models[1]: # dualdynamics
             input_option = str(self.model_name.split('_')[1])
             flow_option = str(self.model_name.split('_')[2])
             vector_field = FinalTanhT(input_channels=self.coeff_dim, hidden_channels=self.hidden_dim,
                                       hidden_hidden_channels=self.hidden_dim, num_hidden_layers=self.num_hidden_layers)
-            self.seq_layer = NeuralFlowCDE(func=vector_field, input_channels=self.coeff_dim, hidden_channels=self.hidden_dim, 
-                                           num_hidden_layers=self.num_hidden_layers, output_channels=self.hidden_dim, input_option=input_option, flow_option=flow_option)
-            
-        elif self.model_name in flow_models[2]: # neuralmixture
-            input_option = str(self.model_name.split('_')[1])
-            flow_option = str(self.model_name.split('_')[2])
-            vector_field = FinalTanhT(input_channels=self.coeff_dim, hidden_channels=self.hidden_dim,
-                                      hidden_hidden_channels=self.hidden_dim, num_hidden_layers=self.num_hidden_layers)
-            self.seq_layer = NeuralMixture(func=vector_field, input_channels=self.coeff_dim, hidden_channels=self.hidden_dim, 
-                                           num_hidden_layers=self.num_hidden_layers, output_channels=self.hidden_dim, input_option=input_option, flow_option=flow_option)
-
-        elif self.model_name in flow_models[3]: # neuralcontrolledflow
-            input_option = str(self.model_name.split('_')[1])
-            flow_option = str(self.model_name.split('_')[2])
-            vector_field = FinalTanhT(input_channels=self.coeff_dim, hidden_channels=self.hidden_dim,
-                                      hidden_hidden_channels=self.hidden_dim, num_hidden_layers=self.num_hidden_layers)
-            self.seq_layer = NeuralControlledFlow(func=vector_field, input_channels=self.coeff_dim, hidden_channels=self.hidden_dim, 
-                                                  num_hidden_layers=self.num_hidden_layers, output_channels=self.hidden_dim, input_option=input_option, flow_option=flow_option)
+            self.seq_layer = DualDynamics(func=vector_field, input_channels=self.coeff_dim, hidden_channels=self.hidden_dim, 
+                                          num_hidden_layers=self.num_hidden_layers, output_channels=self.hidden_dim, input_option=input_option, flow_option=flow_option)
 
         elif self.model_name in sde_models:
             input_option = int(self.model_name.split('_')[1])
