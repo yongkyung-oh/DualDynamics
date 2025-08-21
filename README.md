@@ -1,9 +1,7 @@
 # DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis
 This repository contains the PyTorch implementation for the paper [DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis](https://arxiv.org/abs/2401.04979).
 
-> Oh, Y., Lim, D., & Kim, S. (2025, Feb). DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis. In The 39th Annual AAAI Conference on Artificial Intelligence.
-
-> Oh, Y., Lim, D., & Kim, S. (2025). DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis. arXiv preprint arXiv:2401.04979.
+> Oh, Y., Lim, D.-Y., & Kim, S. (2025). DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis. In T. Walsh, J. Shah, & Z. Kolter (Eds.), AAAI-25, Sponsored by the Association for the Advancement of Artificial Intelligence, February 25—March 4, 2025, Philadelphia, PA, USA (pp. 19730–19739). AAAI Press. https://doi.org/10.1609/AAAI.V39I18.34173
 
 ---
 
@@ -43,11 +41,15 @@ We are refactoring our experimental pipeline to use the independent library `tor
 
 ## Reference
 ```bibtex
-@inproceedings{
-  oh2025dualdynamics,
-  title={DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis},
-  author={YongKyung Oh and Dongyoung Lim and Sungil Kim},
-  booktitle={The 39th Annual AAAI Conference on Artificial Intelligence},
-  year={2025},
+@inproceedings{oh_dualdynamics_2025,
+	title        = {{DualDynamics}: {Synergizing} {Implicit} and {Explicit} {Methods} for {Robust} {Irregular} {Time} {Series} {Analysis}},
+	shorttitle   = {{DualDynamics}},
+	author       = {Oh, YongKyung and Lim, Dong-Young and Kim, Sungil},
+	year         = 2025,
+	booktitle    = {{AAAI}-25, {Sponsored} by the {Association} for the {Advancement} of {Artificial} {Intelligence}, {February} 25 - {March} 4, 2025, {Philadelphia}, {PA}, {USA}},
+	publisher    = {AAAI Press},
+	pages        = {19730--19739},
+	doi          = {10.1609/AAAI.V39I18.34173},
+	editor       = {Walsh, Toby and Shah, Julie and Kolter, Zico}
 }
 ```
