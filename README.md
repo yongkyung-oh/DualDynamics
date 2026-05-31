@@ -1,55 +1,86 @@
-# DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis
-This repository contains the PyTorch implementation for the paper [DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis](https://arxiv.org/abs/2401.04979).
+# DualDynamics
 
-> Oh, Y., Lim, D.-Y., & Kim, S. (2025). DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis. In T. Walsh, J. Shah, & Z. Kolter (Eds.), AAAI-25, Sponsored by the Association for the Advancement of Artificial Intelligence, February 25—March 4, 2025, Philadelphia, PA, USA (pp. 19730–19739). AAAI Press. https://doi.org/10.1609/AAAI.V39I18.34173
+**DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular
+Time Series Analysis**
 
----
+DualDynamics is a deep learning framework for **irregular time series analysis** that
+combines **implicit** (neural differential equation / Neural CDE) and **explicit**
+(attention-based) methods to stay accurate and robust under missing data and irregular
+sampling. This repository provides the official PyTorch implementation, with experiments
+covering classification, interpolation, and forecasting on PhysioNet, MuJoCo, and Google.
 
-# **Code architecture**
-The code for each experiment is meticulously organized into separate folders, aligned with the original references used for implementation. 
+**Authors:** YongKyung Oh, Dong-Young Lim, Sungil Kim
+**Venue:** Proceedings of the AAAI Conference on Artificial Intelligence (AAAI-25),
+vol. 39, no. 18, pp. 19730–19739, 2025.
+**Links:** [Paper (AAAI)](https://ojs.aaai.org/index.php/AAAI/article/view/34173) ·
+[DOI: 10.1609/aaai.v39i18.34173](https://doi.org/10.1609/aaai.v39i18.34173) ·
+[arXiv:2401.04979](https://arxiv.org/abs/2401.04979)
 
-- `exp_classification`: PhysioNet Sepsis, implemented from Kidger, P. et al. (2020) [1] (https://github.com/patrick-kidger/NeuralCDE)
-- `exp_interpolation`: PhysionNet Mortality, implemented from Shukla, S. et al. (2020) [2] (https://github.com/reml-lab/mTAN)
-- `exp_MuJoCo`: MuJoCo Foresting task, implemented from Jhin, S. et al. (2021) [3] (https://github.com/sheoyon-jhin/ANCDE)
-- `exp_Google_2021`: Google Foresting task, implemented from Jhin, S. et al. (2022) [4] (https://github.com/sheoyon-jhin/EXIT)
-- `torch_ists`: motivated from Kidger et al. (2020) [1] (https://github.com/patrick-kidger/NeuralCDE) and Oh et al. (2024) [5] (https://github.com/yongkyung-oh/Stable-Neural-SDEs), we develop new python/pytorch wrapper for extensive experiments on robustness to missing data
+**Keywords:** irregular time series, missing data, Neural CDE, neural differential
+equations, implicit/explicit methods, robustness, classification, interpolation,
+forecasting
 
-[1] Kidger, P., Morrill, J., Foster, J., & Lyons, T. (2020). Neural controlled differential equations for irregular time series. Advances in Neural Information Processing Systems, 33, 6696-6707.
+## Overview
 
-[2] Shukla, S. N., & Marlin, B. (2020, October). Multi-Time Attention Networks for Irregularly Sampled Time Series. In International Conference on Learning Representations.
+Irregularly sampled and partially observed time series are common in healthcare, sensing,
+and scientific data. DualDynamics synergizes implicit continuous-time dynamics with
+explicit attention mechanisms to deliver robust performance across classification,
+interpolation, and forecasting tasks, including under varying levels of missingness.
 
-[3] Jhin, S. Y., Shin, H., Hong, S., Jo, M., Park, S., Park, N., ... & Jeon, S. (2021, December). Attentive Neural Controlled Differential Equations for Time-series Classification and Forecasting. In 2021 IEEE International Conference on Data Mining (ICDM) (pp. 250-259). IEEE Computer Society.
+> Reproducibility: robustness-to-missingness experiments use the standalone
+> [`torch-ists`](https://github.com/yongkyung-oh/torch-ists) library; the bundled
+> `torch-ists/` folder mirrors that wrapper.
 
-[4] Jhin, S. Y., Lee, J., Jo, M., Kook, S., Jeon, J., Hyeong, J., ... & Park, N. (2022, April). Exit: Extrapolation and interpolation-based neural controlled differential equations for time-series classification and forecasting. In Proceedings of the ACM Web Conference 2022 (pp. 3102-3112).
- 
-[5] Oh, Y., Lim, D., & Kim, S. (2024), Stable Neural Stochastic Differential Equations in Analyzing Irregular Time Series Data, The Twelfth International Conference on Learning Representations (ICLR) 2024, May 2024. Spotlight presentation (Notable Top 5%). 
+## Code architecture
 
----
+The code for each experiment is organized into separate folders, aligned with the
+original references used for implementation.
 
-**Current State of the Code and Future Plans**:
-- It is acknowledged that the current version of the code is somewhat messy. This candid admission suggests ongoing development and refinement of the codebase.
-- Despite its current state, the code provides valuable insights into the code-level details of the implementation, which can be beneficial for researchers and practitioners interested in understanding or replicating the study.
-- Future efforts may focus on cleaning and documenting the code further to enhance its accessibility and usability for the wider research community.
+- `exp_classification`: PhysioNet Sepsis, from Kidger, P. et al. (2020) [1] ([NeuralCDE](https://github.com/patrick-kidger/NeuralCDE))
+- `exp_interpolation`: PhysioNet Mortality, from Shukla, S. et al. (2020) [2] ([mTAN](https://github.com/reml-lab/mTAN))
+- `exp_MuJoCo`: MuJoCo forecasting, from Jhin, S. et al. (2021) [3] ([ANCDE](https://github.com/sheoyon-jhin/ANCDE))
+- `exp_Google_2021`: Google forecasting, from Jhin, S. et al. (2022) [4] ([EXIT](https://github.com/sheoyon-jhin/EXIT))
+- `torch-ists`: a Python/PyTorch wrapper for robustness-to-missing-data experiments,
+  motivated by Kidger et al. (2020) [1] and Oh et al. (2024) [5] ([Stable-Neural-SDEs](https://github.com/yongkyung-oh/Stable-Neural-SDEs))
 
----
+## References
 
-**Robustness to Missingness Experiment**:
+[1] Kidger, P., Morrill, J., Foster, J., & Lyons, T. (2020). Neural controlled
+differential equations for irregular time series. Advances in Neural Information
+Processing Systems, 33, 6696-6707.
+[2] Shukla, S. N., & Marlin, B. (2020, October). Multi-Time Attention Networks for
+Irregularly Sampled Time Series. In International Conference on Learning Representations.
+[3] Jhin, S. Y., Shin, H., Hong, S., Jo, M., Park, S., Park, N., ... & Jeon, S. (2021,
+December). Attentive Neural Controlled Differential Equations for Time-series
+Classification and Forecasting. In 2021 IEEE International Conference on Data Mining
+(ICDM) (pp. 250-259). IEEE Computer Society.
+[4] Jhin, S. Y., Lee, J., Jo, M., Kook, S., Jeon, J., Hyeong, J., ... & Park, N. (2022,
+April). Exit: Extrapolation and interpolation-based neural controlled differential
+equations for time-series classification and forecasting. In Proceedings of the ACM Web
+Conference 2022 (pp. 3102-3112).
+[5] Oh, Y., Lim, D., & Kim, S. (2024). Stable Neural Stochastic Differential Equations in
+Analyzing Irregular Time Series Data. The Twelfth International Conference on Learning
+Representations (ICLR) 2024, May 2024. Spotlight presentation (Notable Top 5%).
 
-We are refactoring our experimental pipeline to use the independent library `torch-ists`. For reproducibility, we recommend using this updated version. You can find the library at the [torch-ists repository](https://github.com/yongkyung-oh/torch-ists).
+## Citation
 
----
+If you use this work, please cite the AAAI-25 paper. Machine-readable metadata is also
+available in [`CITATION.cff`](CITATION.cff).
 
-## Reference
 ```bibtex
 @inproceedings{oh_dualdynamics_2025,
-	title        = {{DualDynamics}: {Synergizing} {Implicit} and {Explicit} {Methods} for {Robust} {Irregular} {Time} {Series} {Analysis}},
-	shorttitle   = {{DualDynamics}},
-	author       = {Oh, YongKyung and Lim, Dong-Young and Kim, Sungil},
-	year         = 2025,
-	booktitle    = {{AAAI}-25, {Sponsored} by the {Association} for the {Advancement} of {Artificial} {Intelligence}, {February} 25 - {March} 4, 2025, {Philadelphia}, {PA}, {USA}},
-	publisher    = {AAAI Press},
-	pages        = {19730--19739},
-	doi          = {10.1609/AAAI.V39I18.34173},
-	editor       = {Walsh, Toby and Shah, Julie and Kolter, Zico}
+  title     = {{DualDynamics}: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis},
+  author    = {Oh, YongKyung and Lim, Dong-Young and Kim, Sungil},
+  year      = 2025,
+  booktitle = {Proceedings of the {AAAI} Conference on Artificial Intelligence},
+  publisher = {AAAI Press},
+  volume    = 39,
+  number    = 18,
+  pages     = {19730--19739},
+  doi       = {10.1609/aaai.v39i18.34173}
 }
 ```
+
+## License
+
+This project is released under the MIT License. See [`LICENSE`](LICENSE) for details.
