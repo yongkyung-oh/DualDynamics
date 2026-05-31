@@ -4,8 +4,8 @@
 Time Series Analysis**
 
 DualDynamics is a deep learning framework for **irregular time series analysis** that
-combines **implicit** (neural differential equation / Neural CDE) and **explicit**
-(attention-based) methods to stay accurate and robust under missing data and irregular
+combines **implicit** (Neural Differential Equation–based) and **explicit**
+(Neural Flow–based) methods to stay accurate and robust under missing data and irregular
 sampling. This repository provides the official PyTorch implementation, with experiments
 covering classification, interpolation, and forecasting on PhysioNet, MuJoCo, and Google.
 
@@ -23,8 +23,8 @@ forecasting
 ## Overview
 
 Irregularly sampled and partially observed time series are common in healthcare, sensing,
-and scientific data. DualDynamics synergizes implicit continuous-time dynamics with
-explicit attention mechanisms to deliver robust performance across classification,
+and scientific data. DualDynamics synergizes implicit continuous-time dynamics (NDEs)
+with explicit Neural Flow–based methods to deliver robust performance across classification,
 interpolation, and forecasting tasks, including under varying levels of missingness.
 
 > Reproducibility: robustness-to-missingness experiments use the standalone
