@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis"
+type: software
+authors:
+  - family-names: Oh
+    given-names: YongKyung
+  - family-names: Lim
+    given-names: Dong-Young
+  - family-names: Kim
+    given-names: Sungil
+repository-code: "https://github.com/yongkyung-oh/DualDynamics"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "DualDynamics: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis"
+  authors:
+    - family-names: Oh
+      given-names: YongKyung
+    - family-names: Lim
+      given-names: Dong-Young
+    - family-names: Kim
+      given-names: Sungil
+  editors:
+    - family-names: Walsh
+      given-names: Toby
+    - family-names: Shah
+      given-names: Julie
+    - family-names: Kolter
+      given-names: Zico
+  collection-title: "Proceedings of the AAAI Conference on Artificial Intelligence"
+  collection-type: proceedings
+  conference:
+    name: "AAAI-25, Sponsored by the Association for the Advancement of Artificial Intelligence"
+    city: Philadelphia
+    region: PA
+    country: US
+    date-start: "2025-02-25"
+    date-end: "2025-03-04"
+  volume: 39
+  issue: 18
+  start: "19730"
+  end: "19739"
+  year: 2025
+  date-published: "2025-04-11"
+  publisher:
+    name: "Association for the Advancement of Artificial Intelligence (AAAI)"
+  doi: 10.1609/aaai.v39i18.34173
+  url: "https://ojs.aaai.org/index.php/AAAI/article/view/34173"
+  identifiers:
+    - type: other
+      value: "arXiv:2401.04979"
+      description: "arXiv preprint identifier"
