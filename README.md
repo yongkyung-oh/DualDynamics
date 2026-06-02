@@ -16,9 +16,10 @@ vol. 39, no. 18, pp. 19730–19739, 2025.
 [DOI: 10.1609/aaai.v39i18.34173](https://doi.org/10.1609/aaai.v39i18.34173) ·
 [arXiv:2401.04979](https://arxiv.org/abs/2401.04979)
 
-**Keywords:** irregular time series, missing data, Neural CDE, neural differential
-equations, implicit/explicit methods, robustness, classification, interpolation,
-forecasting
+**Keywords:** Machine Learning (ML): ML: General, Machine Learning (ML): ML:
+Classification and Regression, Machine Learning (ML): ML: Time-Series/Data
+Streams, Data Mining & Knowledge Management (DMKM): DMKM: Mining of Spatial &
+Temporal or Spatio-Temporal Data
 
 ## Overview
 
@@ -37,7 +38,7 @@ The code for each experiment is organized into separate folders, aligned with th
 original references used for implementation.
 
 - `exp_classification`: PhysioNet Sepsis, from Kidger, P. et al. (2020) [1] ([NeuralCDE](https://github.com/patrick-kidger/NeuralCDE))
-- `exp_interpolation`: PhysioNet Mortality, from Shukla, S. et al. (2020) [2] ([mTAN](https://github.com/reml-lab/mTAN))
+- `exp_interpolation`: PhysioNet Mortality, from Shukla, S. et al. (2021) [2] ([mTAN](https://github.com/reml-lab/mTAN))
 - `exp_MuJoCo`: MuJoCo forecasting, from Jhin, S. et al. (2021) [3] ([ANCDE](https://github.com/sheoyon-jhin/ANCDE))
 - `exp_Google_2021`: Google forecasting, from Jhin, S. et al. (2022) [4] ([EXIT](https://github.com/sheoyon-jhin/EXIT))
 - `torch-ists`: a Python/PyTorch wrapper for robustness-to-missing-data experiments,
@@ -48,8 +49,8 @@ original references used for implementation.
 [1] Kidger, P., Morrill, J., Foster, J., & Lyons, T. (2020). Neural controlled
 differential equations for irregular time series. Advances in Neural Information
 Processing Systems, 33, 6696-6707.
-[2] Shukla, S. N., & Marlin, B. (2020, October). Multi-Time Attention Networks for
-Irregularly Sampled Time Series. In International Conference on Learning Representations.
+[2] Shukla, S. N., & Marlin, B. M. (2021). Multi-Time Attention Networks for
+Irregularly Sampled Time Series. In 9th International Conference on Learning Representations (ICLR 2021). https://openreview.net/forum?id=4c0J6lwQ4_
 [3] Jhin, S. Y., Shin, H., Hong, S., Jo, M., Park, S., Park, N., ... & Jeon, S. (2021,
 December). Attentive Neural Controlled Differential Equations for Time-series
 Classification and Forecasting. In 2021 IEEE International Conference on Data Mining
@@ -78,6 +79,15 @@ available in [`CITATION.cff`](CITATION.cff).
   number    = 18,
   pages     = {19730--19739},
   doi       = {10.1609/aaai.v39i18.34173}
+}
+
+@misc{oh_dualdynamics_2024_arxiv,
+  title     = {{DualDynamics}: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis},
+  author    = {Oh, YongKyung and Lim, Dong-Young and Kim, Sungil},
+  year      = {2024},
+  publisher = {arXiv},
+  doi       = {10.48550/arXiv.2401.04979},
+  url       = {https://arxiv.org/abs/2401.04979}
 }
 ```
 
