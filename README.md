@@ -80,7 +80,9 @@ available in [`CITATION.cff`](CITATION.cff).
   pages     = {19730--19739},
   doi       = {10.1609/aaai.v39i18.34173}
 }
+```
 
+```bibtex
 @misc{oh_dualdynamics_2024_arxiv,
   title     = {{DualDynamics}: Synergizing Implicit and Explicit Methods for Robust Irregular Time Series Analysis},
   author    = {Oh, YongKyung and Lim, Dong-Young and Kim, Sungil},
