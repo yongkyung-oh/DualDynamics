@@ -28,9 +28,9 @@ and scientific data. DualDynamics synergizes implicit continuous-time dynamics (
 with explicit Neural Flow–based methods to deliver robust performance across classification,
 interpolation, and forecasting tasks, including under varying levels of missingness.
 
-> Reproducibility: robustness-to-missingness experiments use the standalone
-> [`torch-ists`](https://github.com/yongkyung-oh/torch-ists) library; the bundled
-> `torch-ists/` folder mirrors that wrapper.
+Robustness-to-missingness experiments are included in [`torch-ists/`](torch-ists/).
+
+For deployment and new applications, see the separately packaged [nde-for-ts/torch-ists](https://github.com/nde-for-ts/torch-ists) implementation.
 
 ## Code architecture
 
@@ -41,7 +41,7 @@ original references used for implementation.
 - `exp_interpolation`: PhysioNet Mortality, from Shukla, S. et al. (2021) [2] ([mTAN](https://github.com/reml-lab/mTAN))
 - `exp_MuJoCo`: MuJoCo forecasting, from Jhin, S. et al. (2021) [3] ([ANCDE](https://github.com/sheoyon-jhin/ANCDE))
 - `exp_Google_2021`: Google forecasting, from Jhin, S. et al. (2022) [4] ([EXIT](https://github.com/sheoyon-jhin/EXIT))
-- `torch-ists`: a Python/PyTorch wrapper for robustness-to-missing-data experiments,
+- [`torch-ists/`](torch-ists/): a Python/PyTorch wrapper for robustness-to-missing-data experiments,
   motivated by Kidger et al. (2020) [1] and Oh et al. (2024) [5] ([Stable-Neural-SDEs](https://github.com/yongkyung-oh/Stable-Neural-SDEs))
 
 ## References
